@@ -161,7 +161,7 @@ const GetStartedPage = () => {
       <header className="w-full py-4 px-6 flex justify-between items-center border-b border-gray-700">
         <h1 className="text-2xl font-bold tracking-tight">PortfolioGen</h1>
         <nav>
-          <Link href="/" className="hover:text-indigo-400 transition text-gray-300">
+          <Link href="/" className="hover:text-blue-400 transition text-gray-300">
             Home
           </Link>
         </nav>
@@ -182,7 +182,7 @@ const GetStartedPage = () => {
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Personal Information */}
             <div className="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">Personal Information</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Personal Information</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
@@ -195,7 +195,7 @@ const GetStartedPage = () => {
                     placeholder="John Doe"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -210,7 +210,7 @@ const GetStartedPage = () => {
                     placeholder="john@example.com"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -225,7 +225,7 @@ const GetStartedPage = () => {
                     placeholder="+1 (555) 123-4567"
                     value={formData.contact}
                     onChange={handleChange}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
                 <div>
@@ -239,7 +239,7 @@ const GetStartedPage = () => {
                     placeholder="San Francisco, CA"
                     value={formData.address}
                     onChange={handleChange}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
                 <div className="md:col-span-2">
@@ -253,7 +253,7 @@ const GetStartedPage = () => {
                     placeholder="Stanford University"
                     value={formData.university}
                     onChange={handleChange}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
               </div>
@@ -261,7 +261,7 @@ const GetStartedPage = () => {
 
             {/* Education */}
             <div className="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">Education</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Education</h3>
 
               {formData.education.length > 0 && (
                 <div className="mb-6 space-y-3">
@@ -296,7 +296,7 @@ const GetStartedPage = () => {
                     placeholder="BS in Computer Science"
                     value={currentEducation.degree}
                     onChange={(e) => handleEducationChange("degree", e.target.value)}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
                 <div>
@@ -309,7 +309,7 @@ const GetStartedPage = () => {
                     placeholder="University Name"
                     value={currentEducation.institution}
                     onChange={(e) => handleEducationChange("institution", e.target.value)}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
                 <div>
@@ -322,14 +322,14 @@ const GetStartedPage = () => {
                     placeholder="2018-2022"
                     value={currentEducation.year}
                     onChange={(e) => handleEducationChange("year", e.target.value)}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
               </div>
               <button
                 type="button"
                 onClick={addEducation}
-                className="mt-3 flex items-center text-sm text-indigo-400 hover:text-indigo-300"
+                className="mt-3 flex items-center text-sm text-blue-400 hover:text-blue-300"
               >
                 <Plus className="h-4 w-4 mr-1" /> Add Education
               </button>
@@ -337,7 +337,7 @@ const GetStartedPage = () => {
 
             {/* Projects */}
             <div className="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">Projects</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Projects</h3>
 
               {formData.projects.map((proj, idx) => (
                 <div key={idx} className="mb-6 bg-gray-700/50 p-4 rounded-lg">
@@ -364,7 +364,7 @@ const GetStartedPage = () => {
                         placeholder="E-commerce Website"
                         value={proj.title}
                         onChange={(e) => handleProjectChange(idx, "title", e.target.value)}
-                        className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                        className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                         required
                       />
                     </div>
@@ -377,7 +377,7 @@ const GetStartedPage = () => {
                         placeholder="Describe your project, technologies used, and your role"
                         value={proj.description}
                         onChange={(e) => handleProjectChange(idx, "description", e.target.value)}
-                        className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 h-24 resize-none"
+                        className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 h-24 resize-none"
                         required
                       />
                     </div>
@@ -388,7 +388,7 @@ const GetStartedPage = () => {
               <button
                 type="button"
                 onClick={addProject}
-                className="flex items-center text-sm text-indigo-400 hover:text-indigo-300"
+                className="flex items-center text-sm text-blue-400 hover:text-blue-300"
               >
                 <Plus className="h-4 w-4 mr-1" /> Add Another Project
               </button>
@@ -396,7 +396,7 @@ const GetStartedPage = () => {
 
             {/* Experience */}
             <div className="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">Work Experience</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Work Experience</h3>
 
               {formData.experience.length > 0 && (
                 <div className="mb-6 space-y-3">
@@ -431,7 +431,7 @@ const GetStartedPage = () => {
                     placeholder="Software Engineer"
                     value={currentExperience.role}
                     onChange={(e) => handleExperienceChange("role", e.target.value)}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
                 <div>
@@ -444,7 +444,7 @@ const GetStartedPage = () => {
                     placeholder="Google"
                     value={currentExperience.company}
                     onChange={(e) => handleExperienceChange("company", e.target.value)}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
                 <div>
@@ -457,7 +457,7 @@ const GetStartedPage = () => {
                     placeholder="Jan 2020 - Present"
                     value={currentExperience.period}
                     onChange={(e) => handleExperienceChange("period", e.target.value)}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
                 <div className="md:col-span-2">
@@ -469,14 +469,14 @@ const GetStartedPage = () => {
                     placeholder="Describe your responsibilities and achievements"
                     value={currentExperience.description}
                     onChange={(e) => handleExperienceChange("description", e.target.value)}
-                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 h-20 resize-none"
+                    className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 h-20 resize-none"
                   />
                 </div>
               </div>
               <button
                 type="button"
                 onClick={addExperience}
-                className="flex items-center text-sm text-indigo-400 hover:text-indigo-300"
+                className="flex items-center text-sm text-blue-400 hover:text-blue-300"
               >
                 <Plus className="h-4 w-4 mr-1" /> Add Experience
               </button>
@@ -484,7 +484,7 @@ const GetStartedPage = () => {
 
             {/* Achievements */}
             <div className="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">Achievements</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Achievements</h3>
 
               {formData.achievements.length > 0 && (
                 <div className="mb-6 space-y-2">
@@ -509,12 +509,12 @@ const GetStartedPage = () => {
                   placeholder="e.g., Won first place in hackathon"
                   value={currentAchievement}
                   onChange={(e) => handleAchievementChange(e.target.value)}
-                  className="flex-1 p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                  className="flex-1 p-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 />
                 <button
                   type="button"
                   onClick={addAchievement}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition flex items-center"
+                  className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition flex items-center"
                 >
                   <Plus className="h-4 w-4 mr-1" /> Add
                 </button>
@@ -526,7 +526,7 @@ const GetStartedPage = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
-              className="w-full bg-indigo-600 hover:bg-indigo-700 transition px-6 py-3 rounded-xl text-white text-lg font-semibold shadow-lg"
+              className="w-full bg-blue-700 hover:bg-blue-800 transition px-6 py-3 rounded-xl text-white text-lg font-semibold shadow-lg"
             >
               Preview Your Portfolio
             </motion.button>

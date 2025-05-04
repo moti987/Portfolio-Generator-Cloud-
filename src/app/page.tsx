@@ -3,7 +3,7 @@ import type React from "react"
 import { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Briefcase, Rocket, Zap, Mail, Github, Linkedin, ArrowRight } from "lucide-react"
+import { Briefcase, Rocket, Zap, Mail, Github, Linkedin, ArrowRight } from 'lucide-react'
 
 const LandingPage: React.FC = () => {
   const [email, setEmail] = useState("")
@@ -41,10 +41,10 @@ const LandingPage: React.FC = () => {
       <header className="w-full py-5 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center border-b border-gray-700">
         <h1 className="text-3xl font-bold mb-4 md:mb-0">PortfolioGen</h1>
         <nav className="space-x-3 md:space-x-6 text-gray-300 flex flex-wrap justify-center">
-          <a href="#features" className="hover:text-indigo-400 transition px-2 py-1">
+          <a href="#features" className="hover:text-blue-400 transition px-2 py-1">
             Features
           </a>
-          <a href="#contact" className="hover:text-indigo-400 transition px-2 py-1">
+          <a href="#contact" className="hover:text-blue-400 transition px-2 py-1">
             Contact
           </a>
         </nav>
@@ -59,7 +59,7 @@ const LandingPage: React.FC = () => {
           className="max-w-4xl mx-auto"
         >
           <motion.h2
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -86,7 +86,7 @@ const LandingPage: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white text-lg px-8 py-3 rounded-xl transition shadow-lg flex items-center justify-center"
+                className="bg-blue-700 hover:bg-blue-800 text-white text-lg px-8 py-3 rounded-xl transition shadow-lg flex items-center justify-center"
               >
                 Get Started <ArrowRight className="ml-2 h-5 w-5" />
               </motion.button>
@@ -95,7 +95,7 @@ const LandingPage: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-transparent border border-indigo-400 text-indigo-400 hover:bg-indigo-900/20 text-lg px-8 py-3 rounded-xl transition shadow-lg"
+                className="bg-transparent border border-blue-500 text-blue-400 hover:bg-blue-900/20 text-lg px-8 py-3 rounded-xl transition shadow-lg"
               >
                 View Examples
               </motion.button>
@@ -123,10 +123,10 @@ const LandingPage: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               variants={itemVariants}
-              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20"
+              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
             >
-              <div className="bg-indigo-600/20 p-3 rounded-lg w-fit mb-4">
-                <Rocket className="h-6 w-6 text-indigo-400" />
+              <div className="bg-blue-600/20 p-3 rounded-lg w-fit mb-4">
+                <Rocket className="h-6 w-6 text-blue-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">One-Click Deploy</h3>
               <p className="text-gray-400">
@@ -136,10 +136,10 @@ const LandingPage: React.FC = () => {
 
             <motion.div
               variants={itemVariants}
-              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20"
+              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
             >
-              <div className="bg-indigo-600/20 p-3 rounded-lg w-fit mb-4">
-                <Briefcase className="h-6 w-6 text-indigo-400" />
+              <div className="bg-blue-600/20 p-3 rounded-lg w-fit mb-4">
+                <Briefcase className="h-6 w-6 text-blue-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">Project Showcase</h3>
               <p className="text-gray-400">
@@ -149,10 +149,10 @@ const LandingPage: React.FC = () => {
 
             <motion.div
               variants={itemVariants}
-              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20"
+              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
             >
-              <div className="bg-indigo-600/20 p-3 rounded-lg w-fit mb-4">
-                <Zap className="h-6 w-6 text-indigo-400" />
+              <div className="bg-blue-600/20 p-3 rounded-lg w-fit mb-4">
+                <Zap className="h-6 w-6 text-blue-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">SEO Optimized</h3>
               <p className="text-gray-400">
@@ -162,10 +162,10 @@ const LandingPage: React.FC = () => {
 
             <motion.div
               variants={itemVariants}
-              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20"
+              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
             >
-              <div className="bg-indigo-600/20 p-3 rounded-lg w-fit mb-4">
-                <Github className="h-6 w-6 text-indigo-400" />
+              <div className="bg-blue-600/20 p-3 rounded-lg w-fit mb-4">
+                <Github className="h-6 w-6 text-blue-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">GitHub Integration</h3>
               <p className="text-gray-400">
@@ -175,10 +175,10 @@ const LandingPage: React.FC = () => {
 
             <motion.div
               variants={itemVariants}
-              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20"
+              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
             >
-              <div className="bg-indigo-600/20 p-3 rounded-lg w-fit mb-4">
-                <Linkedin className="h-6 w-6 text-indigo-400" />
+              <div className="bg-blue-600/20 p-3 rounded-lg w-fit mb-4">
+                <Linkedin className="h-6 w-6 text-blue-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">Social Integration</h3>
               <p className="text-gray-400">
@@ -232,8 +232,8 @@ const LandingPage: React.FC = () => {
                 className="bg-gray-800/30 p-6 rounded-xl border border-gray-700"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-indigo-600/20 flex items-center justify-center mr-4">
-                    <span className="text-xl font-bold text-indigo-400">{testimonial.name.charAt(0)}</span>
+                  <div className="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center mr-4">
+                    <span className="text-xl font-bold text-blue-400">{testimonial.name.charAt(0)}</span>
                   </div>
                   <div>
                     <h4 className="font-bold">{testimonial.name}</h4>
@@ -266,29 +266,29 @@ const LandingPage: React.FC = () => {
               <h3 className="text-xl font-bold mb-4">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Mail className="h-5 w-5 text-indigo-400 mr-3" />
-                  <a href="mailto:support@portfoliogen.com" className="text-gray-300 hover:text-indigo-400 transition">
+                  <Mail className="h-5 w-5 text-blue-400 mr-3" />
+                  <a href="mailto:support@portfoliogen.com" className="text-gray-300 hover:text-blue-400 transition">
                     support@portfoliogen.com
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Github className="h-5 w-5 text-indigo-400 mr-3" />
+                  <Github className="h-5 w-5 text-blue-400 mr-3" />
                   <a
                     href="https://github.com/portfoliogen"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-indigo-400 transition"
+                    className="text-gray-300 hover:text-blue-400 transition"
                   >
                     github.com/portfoliogen
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Linkedin className="h-5 w-5 text-indigo-400 mr-3" />
+                  <Linkedin className="h-5 w-5 text-blue-400 mr-3" />
                   <a
                     href="https://linkedin.com/company/portfoliogen"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-indigo-400 transition"
+                    className="text-gray-300 hover:text-blue-400 transition"
                   >
                     linkedin.com/company/portfoliogen
                   </a>
@@ -305,7 +305,7 @@ const LandingPage: React.FC = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your name"
                   />
                 </div>
@@ -316,7 +316,7 @@ const LandingPage: React.FC = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -327,14 +327,14 @@ const LandingPage: React.FC = () => {
                   <textarea
                     id="message"
                     rows={4}
-                    className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your message"
                   ></textarea>
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-lg transition"
+                  className="w-full bg-blue-700 hover:bg-blue-800 text-white py-2 rounded-lg transition"
                   type="submit"
                 >
                   Send Message
@@ -346,7 +346,7 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-indigo-900/30">
+      <section className="py-16 md:py-24 px-6 md:px-12 bg-blue-900/30">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -365,14 +365,14 @@ const LandingPage: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition whitespace-nowrap"
+                className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg transition whitespace-nowrap"
               >
                 Subscribe
               </motion.button>
@@ -389,7 +389,7 @@ const LandingPage: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="max-w-4xl mx-auto bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 md:p-12 border border-indigo-500/30"
+          className="max-w-4xl mx-auto bg-gradient-to-r from-blue-900/50 to-gray-800/50 rounded-2xl p-8 md:p-12 border border-blue-500/30"
         >
           <motion.div variants={itemVariants} className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Showcase Your Work?</h2>
@@ -401,7 +401,7 @@ const LandingPage: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white text-lg px-8 py-3 rounded-xl transition shadow-lg"
+                  className="bg-blue-700 hover:bg-blue-800 text-white text-lg px-8 py-3 rounded-xl transition shadow-lg"
                 >
                   Get Started for Free
                 </motion.button>
@@ -410,7 +410,7 @@ const LandingPage: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-transparent border border-indigo-400 text-indigo-400 hover:bg-indigo-900/20 text-lg px-8 py-3 rounded-xl transition shadow-lg"
+                  className="bg-transparent border border-blue-500 text-blue-400 hover:bg-blue-900/20 text-lg px-8 py-3 rounded-xl transition shadow-lg"
                 >
                   Learn More
                 </motion.button>
@@ -432,17 +432,17 @@ const LandingPage: React.FC = () => {
               <h4 className="font-bold mb-4">Product</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a href="#features" className="hover:text-indigo-400 transition">
+                  <a href="#features" className="hover:text-blue-400 transition">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="/pricing" className="hover:text-indigo-400 transition">
+                  <a href="/pricing" className="hover:text-blue-400 transition">
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <a href="/faq" className="hover:text-indigo-400 transition">
+                  <a href="/faq" className="hover:text-blue-400 transition">
                     FAQ
                   </a>
                 </li>
@@ -452,22 +452,22 @@ const LandingPage: React.FC = () => {
               <h4 className="font-bold mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a href="/blog" className="hover:text-indigo-400 transition">
+                  <a href="/blog" className="hover:text-blue-400 transition">
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a href="/docs" className="hover:text-indigo-400 transition">
+                  <a href="/docs" className="hover:text-blue-400 transition">
                     Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="/tutorials" className="hover:text-indigo-400 transition">
+                  <a href="/tutorials" className="hover:text-blue-400 transition">
                     Tutorials
                   </a>
                 </li>
                 <li>
-                  <a href="/support" className="hover:text-indigo-400 transition">
+                  <a href="/support" className="hover:text-blue-400 transition">
                     Support
                   </a>
                 </li>
@@ -477,22 +477,22 @@ const LandingPage: React.FC = () => {
               <h4 className="font-bold mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a href="/about" className="hover:text-indigo-400 transition">
+                  <a href="/about" className="hover:text-blue-400 transition">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="/careers" className="hover:text-indigo-400 transition">
+                  <a href="/careers" className="hover:text-blue-400 transition">
                     Careers
                   </a>
                 </li>
                 <li>
-                  <a href="/privacy" className="hover:text-indigo-400 transition">
+                  <a href="/privacy" className="hover:text-blue-400 transition">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="/terms" className="hover:text-indigo-400 transition">
+                  <a href="/terms" className="hover:text-blue-400 transition">
                     Terms of Service
                   </a>
                 </li>
@@ -505,15 +505,15 @@ const LandingPage: React.FC = () => {
               © {new Date().getFullYear()} PortfolioGen. Built for Cloud Learners.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-indigo-400 transition">
+              <a href="#" className="text-gray-400 hover:text-blue-400 transition">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-indigo-400 transition">
+              <a href="#" className="text-gray-400 hover:text-blue-400 transition">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-indigo-400 transition">
+              <a href="#" className="text-gray-400 hover:text-blue-400 transition">
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </a>
