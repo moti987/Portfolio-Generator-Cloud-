@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { ArrowLeft, Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react"
 import { motion } from "framer-motion"
+import { Suspense, useState, useEffect } from "react"
 
 type Project = {
   title: string
@@ -25,7 +26,8 @@ type Experience = {
 
 type Achievement = string
 
-const PortfolioPreview: React.FC = () => {
+// This component will use the search params
+function PortfolioContent() {
   const searchParams = useSearchParams()
 
   // Parse the query parameter safely with fallback handling
@@ -201,6 +203,33 @@ const PortfolioPreview: React.FC = () => {
         </motion.div>
       </div>
     </div>
+  )
+}
+
+// Main component that wraps the content in a Suspense boundary
+const PortfolioPreview: React.FC = () => {
+  // Use state to handle client-side rendering
+  const [isClient, setIsClient] = useState(false)
+
+  // Set isClient to true after component mounts
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  return (
+    <>
+      {isClient ? (
+        <Suspense
+          fallback={
+            <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">Loading...</div>
+          }
+        >
+          <PortfolioContent />
+        </Suspense>
+      ) : (
+        <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">Loading...</div>
+      )}
+    </>
   )
 }
 
