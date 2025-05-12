@@ -3,7 +3,7 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - main  # You can change this to your default branch if it's not 'main'
+      - main
   pull_request:
     branches:
       - main
@@ -11,27 +11,33 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
+      # Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # Set up Node.js with a compatible version
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '10.9.2'  # Replace with the version you're using, e.g., '18'
+          node-version: '18'  # Or you can specify '18.x' or '20.x' as needed
 
-      - name: Install Dependencies
+      # Install dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: Build the Project
+      # Run linting (optional but recommended)
+      - name: Run lint
+        run: npm run lint
+
+      # Build the project
+      - name: Build Project
         run: npm run build
 
+      # Deploy to Vercel
       - name: Deploy to Vercel
+        run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --confirm
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        run: |
-          npm install -g vercel
-          vercel --token $VERCEL_TOKEN --prod --confirm --scope $VERCEL_ORG_ID --project $VERCEL_PROJECT_ID
