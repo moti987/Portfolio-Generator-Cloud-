@@ -4,40 +4,45 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
-    steps:
-      # Checkout the repository
-      - name: Checkout Repository
-        uses: actions/checkout@v3
 
-      # Set up Node.js with a compatible version
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Set up Node.js to version 22.14.0
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Or you can specify '18.x' or '20.x' as needed
+          node-version: '22.14.0'  # Specify the version you are using
+
+      # Cache node_modules to speed up future builds
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Run linting (optional but recommended)
+      # Run linting (optional, can be removed if not needed)
       - name: Run lint
         run: npm run lint
 
       # Build the project
-      - name: Build Project
+      - name: Build project
         run: npm run build
 
       # Deploy to Vercel
       - name: Deploy to Vercel
-        run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --confirm
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: npx vercel --prod --token $VERCEL_TOKEN
