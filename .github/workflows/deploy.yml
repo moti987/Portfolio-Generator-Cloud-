@@ -14,11 +14,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Set up Node.js to version 22.14.0
-      - name: Set up Node.js
+      # Set up Node.js version 22.14.0
+      - name: Set up Node.js 22.14.0
         uses: actions/setup-node@v3
         with:
-          node-version: '22.14.0'  # Specify the version you are using
+          node-version: '22.14.0'  # This is the version you are using
+
+      # Verify Node.js version
+      - name: Verify Node.js version
+        run: node -v  # This will help us confirm that the correct version is being used
 
       # Cache node_modules to speed up future builds
       - name: Cache node modules
