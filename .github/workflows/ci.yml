@@ -1,0 +1,35 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Trigger CI on push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger CI on pull requests targeting the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu for the build environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Checkout the code from the repository
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3  # Set up Node.js
+        with:
+          node-version: '16'  # You can change this to match your Node.js version
+
+      - name: Install dependencies
+        run: npm install  # Install project dependencies
+
+      - name: Run linting
+        run: npm run lint  # Run the linting script defined in package.json
+
+      - name: Build the project
+        run: npm run build  # Run the build script to check if the build works correctly
+
+      - name: Run tests (if you have any)
+        run: npm test || echo "No tests specified"  # Optional, add this if you have any tests
+
