@@ -174,7 +174,7 @@ const GetStartedPage = () => {
           transition={{ duration: 0.5 }}
           className="w-full max-w-3xl"
         >
-          <h2 className="text-3xl font-bold mb-6 text-center">Let's Build Your Portfolio 🚀</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Let&apos;s Build Your Portfolio 🚀</h2>
           <p className="text-gray-400 text-center mb-8">
             Fill in the details below to create your professional portfolio.
           </p>
