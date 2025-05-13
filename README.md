@@ -1,6 +1,3 @@
-Here's an improved version of your README file. It combines clarity, structure, and professionalism while keeping it concise and beginner-friendly:
-
----
 
 # Portfolio Generator (Cloud-Based)
 
