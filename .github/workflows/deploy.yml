@@ -36,8 +36,6 @@ jobs:
       # Build the project
       - name: Build project
         run: npm run build
-        env:
-          NEXT_PUBLIC_VERCEL_ENV: production
 
       # Deploy to Vercel
       - name: Deploy to Vercel
